@@ -1,5 +1,6 @@
 ## Seleção de personagem:  
-A variável `m_personagens` armazena o nome dos personagens,e se o personagem selecionado for Chameleon, a flag `cham` passa a ser true.  
+A variável `m_personagens` armazena o nome dos personagens, e se o personagem selecionado for Chameleon, a flag `cham` passa a ser true.  
+![image](https://github.com/BrunoVAranha/ChooseYourFighter/assets/49883183/84eb1779-8c8f-4cc2-a934-61f4a9cee72c)  
 ![image](https://github.com/BrunoVAranha/ChooseYourFighter/assets/49883183/7240b7c2-c220-41bf-aac6-4742b3438a9e)  
 
 O personagem selecionado é o parâmetro para carregar o arquivo obj e carregar o modelo:  
