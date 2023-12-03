@@ -49,7 +49,7 @@ class OpenGLWindow : public abcg::OpenGLWindow {
   std::vector<GLuint> m_programs;
   int m_currentProgramIndex{0};
 
-  const std::vector<const char *> m_personagens{"wonkey", "metorse", "werewolf", "man"};
+  const std::vector<const char *> m_personagens{"wonkey", "metorse", "werewolf", "chameleon"};
   int m_currentPersonagem{0};
 
   // Mapping mode
