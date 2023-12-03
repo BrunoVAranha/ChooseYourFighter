@@ -1,0 +1,97 @@
+[
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_application.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_application.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_application.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_elapsedtimer.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_elapsedtimer.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_elapsedtimer.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_exception.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_exception.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_exception.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_image.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_image.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_image.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_openglfunctions.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_openglfunctions.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_openglfunctions.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_openglwindow.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_openglwindow.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_openglwindow.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_string.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_string.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_string.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/abcg.dir/abcg_trackball.cpp.o -c /home/bruno/Downloads/Proj3/abcg/abcg_trackball.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/abcg_trackball.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/imgui",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui -g -flto -fno-fat-lto-objects -o CMakeFiles/imgui.dir/imgui.cpp.o -c /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/imgui",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui -g -flto -fno-fat-lto-objects -o CMakeFiles/imgui.dir/imgui_demo.cpp.o -c /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_demo.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/imgui",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui -g -flto -fno-fat-lto-objects -o CMakeFiles/imgui.dir/imgui_draw.cpp.o -c /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_draw.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/imgui",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui -g -flto -fno-fat-lto-objects -o CMakeFiles/imgui.dir/imgui_widgets.cpp.o -c /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_widgets.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/imgui",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui -g -flto -fno-fat-lto-objects -o CMakeFiles/imgui.dir/imgui_impl_sdl.cpp.o -c /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_impl_sdl.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_impl_sdl.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/imgui",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui -g -flto -fno-fat-lto-objects -o CMakeFiles/imgui.dir/imgui_impl_opengl3.cpp.o -c /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_impl_opengl3.cpp",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/abcg/external/fmt",
+  "command": "/usr/bin/c++  -I/home/bruno/Downloads/Proj3/abcg/external/fmt -g -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/fmt.dir/format.cc.o -c /home/bruno/Downloads/Proj3/abcg/external/fmt/format.cc",
+  "file": "/home/bruno/Downloads/Proj3/abcg/external/fmt/format.cc"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/examples/chooseyourfighter",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/chooseyourfighter.dir/main.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/main.cpp",
+  "file": "/home/bruno/Downloads/Proj3/examples/chooseyourfighter/main.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/examples/chooseyourfighter",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/chooseyourfighter.dir/model.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/model.cpp",
+  "file": "/home/bruno/Downloads/Proj3/examples/chooseyourfighter/model.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/examples/chooseyourfighter",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/openglwindow.cpp",
+  "file": "/home/bruno/Downloads/Proj3/examples/chooseyourfighter/openglwindow.cpp"
+},
+{
+  "directory": "/home/bruno/Downloads/Proj3/build/examples/chooseyourfighter",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external -g -flto -fno-fat-lto-objects -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/chooseyourfighter.dir/trackball.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/trackball.cpp",
+  "file": "/home/bruno/Downloads/Proj3/examples/chooseyourfighter/trackball.cpp"
+}
+]

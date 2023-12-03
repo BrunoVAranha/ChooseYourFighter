@@ -1,0 +1,415 @@
+#include "openglwindow.hpp"
+
+#include <fmt/core.h>
+#include <imgui.h>
+
+#include <cppitertools/itertools.hpp>
+#include <glm/gtc/matrix_inverse.hpp>
+
+// cores camaleao
+glm::vec3 m_cam;
+bool cham = false;
+
+void OpenGLWindow::handleEvent(SDL_Event &event) {
+  glm::ivec2 mousePosition;
+  SDL_GetMouseState(&mousePosition.x, &mousePosition.y);
+
+  if (event.type == SDL_MOUSEMOTION) {
+    m_trackBallModel.mouseMove(mousePosition);
+    m_trackBallLight.mouseMove(mousePosition);
+  }
+  if (event.type == SDL_MOUSEBUTTONDOWN) {
+    if (event.button.button == SDL_BUTTON_LEFT) {
+      m_trackBallModel.mousePress(mousePosition);
+    }
+    if (event.button.button == SDL_BUTTON_RIGHT) {
+      m_trackBallLight.mousePress(mousePosition);
+    }
+  }
+  if (event.type == SDL_MOUSEBUTTONUP) {
+    if (event.button.button == SDL_BUTTON_LEFT) {
+      m_trackBallModel.mouseRelease(mousePosition);
+    }
+    if (event.button.button == SDL_BUTTON_RIGHT) {
+      m_trackBallLight.mouseRelease(mousePosition);
+    }
+  }
+  if (event.type == SDL_MOUSEWHEEL) {
+    m_zoom += (event.wheel.y > 0 ? 1.0f : -1.0f) / 5.0f;
+    m_zoom = glm::clamp(m_zoom, -0.5f, 5.0f);
+  }
+}
+
+void OpenGLWindow::initializeGL() {
+  glClearColor(0, 0, 0, 1);
+  glEnable(GL_DEPTH_TEST);
+
+  ImGuiIO &io{ImGui::GetIO()};
+  auto filename{getAssetsPath() + "globe.ttf"};
+  m_font = io.Fonts->AddFontFromFileTTF(filename.c_str(), 60.0f);
+  if (m_font == nullptr) {
+    throw abcg::Exception{abcg::Exception::Runtime("Cannot load font file")};
+  }
+
+  // Create programs
+  for (const auto &name : m_shaderNames) {
+    auto path{getAssetsPath() + "shaders/" + name};
+    auto program{createProgramFromFile(path + ".vert", path + ".frag")};
+    m_programs.push_back(program);
+  }
+
+  loadModel(getAssetsPath() + "wonkey.obj");
+
+  m_trackBallModel.setAxis(glm::normalize(glm::vec3(-1, 0.1, 0.1)));
+  m_trackBallModel.setVelocity(0.001f);
+
+  initializeSkybox();
+  initializeGameObjects();
+}
+
+
+void OpenGLWindow::initializeGameObjects() {
+  
+  initializeSound(getAssetsPath() + "sounds/mk.wav");
+}
+
+void OpenGLWindow::initializeSkybox() {
+  auto path{getAssetsPath() + "shaders/" + m_skyShaderName};
+  m_skyProgram = createProgramFromFile(path + ".vert", path + ".frag");
+
+  glGenBuffers(1, &m_skyVBO);
+  glBindBuffer(GL_ARRAY_BUFFER, m_skyVBO);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(m_skyPositions), m_skyPositions.data(),
+               GL_STATIC_DRAW);
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+  GLint positionAttribute{glGetAttribLocation(m_skyProgram, "inPosition")};
+
+  glGenVertexArrays(1, &m_skyVAO);
+
+  glBindVertexArray(m_skyVAO);
+
+  glBindBuffer(GL_ARRAY_BUFFER, m_skyVBO);
+  glEnableVertexAttribArray(positionAttribute);
+  glVertexAttribPointer(positionAttribute, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+  glBindVertexArray(0);
+}
+
+void OpenGLWindow::loadModel(std::string_view path) {
+  m_model.loadFromFile(path);
+  m_model.setupVAO(m_programs.at(m_currentProgramIndex));
+  m_trianglesToDraw = m_model.getNumTriangles();
+
+  m_Ka = m_model.getKa();
+  m_Kd = m_model.getKd();
+  m_Ks = m_model.getKs();
+  m_shininess = m_model.getShininess();
+}
+
+void OpenGLWindow::paintGL() {
+
+  std::uniform_real_distribution<float> rd(0.000f, 1.000f);
+    float r = rd(m_randomEngine);
+    float g = rd(m_randomEngine);
+    float b = rd(m_randomEngine);
+    float a = rd(m_randomEngine);
+
+  auto aspect{static_cast<float>(m_viewportWidth) /
+              static_cast<float>(m_viewportHeight)};
+
+  m_projMatrix = glm::perspective(glm::radians(m_FOV), aspect, 0.01f, 100.0f);
+  glDisable(GL_CULL_FACE);
+  glFrontFace(GL_CCW);
+  m_model.setupVAO(m_programs.at(m_currentProgramIndex));
+
+  update();
+
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  glViewport(0, 0, m_viewportWidth, m_viewportHeight);
+
+  const auto program{m_programs.at(m_currentProgramIndex)};
+  glUseProgram(program);
+
+  GLint viewMatrixLoc{glGetUniformLocation(program, "viewMatrix")};
+  GLint projMatrixLoc{glGetUniformLocation(program, "projMatrix")};
+  GLint modelMatrixLoc{glGetUniformLocation(program, "modelMatrix")};
+  GLint normalMatrixLoc{glGetUniformLocation(program, "normalMatrix")};
+  GLint lightDirLoc{glGetUniformLocation(program, "lightDirWorldSpace")};
+  GLint shininessLoc{glGetUniformLocation(program, "shininess")};
+  GLint IaLoc{glGetUniformLocation(program, "Ia")};
+  GLint IdLoc{glGetUniformLocation(program, "Id")};
+  GLint IsLoc{glGetUniformLocation(program, "Is")};
+  GLint KaLoc{glGetUniformLocation(program, "Ka")};
+  GLint KdLoc{glGetUniformLocation(program, "Kd")};
+  GLint KsLoc{glGetUniformLocation(program, "Ks")};
+  GLint diffuseTexLoc{glGetUniformLocation(program, "diffuseTex")};
+  GLint normalTexLoc{glGetUniformLocation(program, "normalTex")};
+  GLint cubeTexLoc{glGetUniformLocation(program, "cubeTex")};
+  GLint mappingModeLoc{glGetUniformLocation(program, "mappingMode")};
+  GLint texMatrixLoc{glGetUniformLocation(program, "texMatrix")};
+
+  // Set uniform variables used by every scene object
+  glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, &m_viewMatrix[0][0]);
+  glUniformMatrix4fv(projMatrixLoc, 1, GL_FALSE, &m_projMatrix[0][0]);
+  glUniform1i(diffuseTexLoc, 0);
+  glUniform1i(normalTexLoc, 1);
+  glUniform1i(cubeTexLoc, 2);
+  glUniform1i(mappingModeLoc, m_mappingMode);
+
+  glm::mat3 texMatrix{m_trackBallLight.getRotation()};
+  glUniformMatrix3fv(texMatrixLoc, 1, GL_TRUE, &texMatrix[0][0]);
+
+  auto lightDirRotated{m_trackBallLight.getRotation() * m_lightDir};
+  glUniform4fv(lightDirLoc, 1, &lightDirRotated.x);
+  glUniform4fv(IaLoc, 1, &m_Ia.x);
+  glUniform4fv(IdLoc, 1, &m_Id.x);
+  glUniform4fv(IsLoc, 1, &m_Is.x);
+
+  // Set uniform variables of the current object
+  glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &m_modelMatrix[0][0]);
+
+  auto modelViewMatrix{glm::mat3(m_viewMatrix * m_modelMatrix)};
+  glm::mat3 normalMatrix{glm::inverseTranspose(modelViewMatrix)};
+  glUniformMatrix3fv(normalMatrixLoc, 1, GL_FALSE, &normalMatrix[0][0]);
+
+  glUniform1f(shininessLoc, m_shininess);
+  glUniform4fv(KaLoc, 1, &m_Ka.x);
+  glUniform4fv(KdLoc, 1, &m_Kd.x);
+  glUniform4fv(KsLoc, 1, &m_Ks.x);
+  m_model.render(m_trianglesToDraw);
+
+
+  if(cham) chameleon(&m_Ka.x, &m_Ka.y, &m_Ka.z);
+
+  if(m_backTimer.elapsed() < m_delay / 1000.0) return;
+  m_backTimer.restart();
+  glClearColor(r, g, b, a);
+  //m_Ka.x = m_Ka.x + 0.1;
+  renderSkybox();
+
+}
+
+void OpenGLWindow::renderSkybox() {
+  glUseProgram(m_skyProgram);
+
+  GLint viewMatrixLoc{glGetUniformLocation(m_skyProgram, "viewMatrix")};
+  GLint projMatrixLoc{glGetUniformLocation(m_skyProgram, "projMatrix")};
+  GLint skyTexLoc{glGetUniformLocation(m_skyProgram, "skyTex")};
+
+  auto viewMatrix{m_trackBallLight.getRotation()};
+  glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, &viewMatrix[0][0]);
+  glUniformMatrix4fv(projMatrixLoc, 1, GL_FALSE, &m_projMatrix[0][0]);
+  glUniform1i(skyTexLoc, 0);
+
+  glBindVertexArray(m_skyVAO);
+
+  glActiveTexture(GL_TEXTURE0);
+  glBindTexture(GL_TEXTURE_CUBE_MAP, m_model.getCubeTexture());
+
+  glEnable(GL_CULL_FACE);
+  glFrontFace(GL_CW);
+  glDepthFunc(GL_LEQUAL);
+  glDrawArrays(GL_TRIANGLES, 0, m_skyPositions.size());
+  glDepthFunc(GL_LESS);
+
+  glBindVertexArray(0);
+  glUseProgram(0);
+}
+
+void OpenGLWindow::paintUI() {
+  abcg::OpenGLWindow::paintUI();
+
+
+
+// {
+//     auto widgetSize{ImVec2(222, 244)};
+
+//     // Calculate the position for the top right corner
+//     ImVec2 windowPos(m_viewportWidth - widgetSize.x - 2, 2);
+
+//     ImGui::SetNextWindowPos(windowPos);
+//     ImGui::SetNextWindowSize(widgetSize);
+//     ImGui::Begin(" ", nullptr, ImGuiWindowFlags_NoDecoration);
+
+//     ImGui::Text("Light properties");
+
+//     // Slider to control light properties
+//     ImGui::PushItemWidth(widgetSize.x - 36);
+//     ImGui::ColorEdit3("Ia", &m_Ia.x, ImGuiColorEditFlags_Float);
+//     ImGui::ColorEdit3("Id", &m_Id.x, ImGuiColorEditFlags_Float);
+//     ImGui::ColorEdit3("Is", &m_Is.x, ImGuiColorEditFlags_Float);
+//     ImGui::PopItemWidth();
+
+//     ImGui::Spacing();
+
+//     ImGui::Text("Material properties");
+
+//     // Slider to control material properties
+//     ImGui::PushItemWidth(widgetSize.x - 36);
+//     ImGui::ColorEdit3("Ka", &m_Ka.x, ImGuiColorEditFlags_Float);
+//     ImGui::ColorEdit3("Kd", &m_Kd.x, ImGuiColorEditFlags_Float);
+//     ImGui::ColorEdit3("Ks", &m_Ks.x, ImGuiColorEditFlags_Float);
+//     ImGui::PopItemWidth();
+
+
+//     ImGui::End();
+//   }
+
+
+
+  {
+    auto size{ImVec2(400, 85)};
+    auto position{ImVec2((m_viewportWidth - size.x) / 2.0f,
+                         (m_viewportHeight - size.y) / 2.0f - 150.0f)};
+    ImGui::SetNextWindowPos(position);
+    ImGui::SetNextWindowSize(size);
+    ImGuiWindowFlags flags{ImGuiWindowFlags_NoBackground |
+                           ImGuiWindowFlags_NoTitleBar |
+                           ImGuiWindowFlags_NoInputs};
+    ImGui::Begin(" ", nullptr, flags);
+    ImGui::PushFont(m_font);
+    ImGui::Text("%s", m_personagens.at(m_currentPersonagem));
+    ImGui::PopFont();
+    ImGui::End();
+  }
+
+  {
+    
+    auto widgetSize{ImVec2(180, 40)};
+    ImGui::SetNextWindowPos(ImVec2(m_viewportWidth - widgetSize.x - 5, m_viewportHeight - widgetSize.y - 5));
+    ImGui::SetNextWindowSize(widgetSize);
+    auto flags{ImGuiWindowFlags_NoDecoration};
+    ImGui::Begin("Widget window", nullptr, flags);
+
+    static std::size_t currentIndex{};
+
+    ImGui::PushItemWidth(120);
+    if (ImGui::BeginCombo("Character", m_personagens.at(currentIndex))) {
+      for (auto index : iter::range(m_personagens.size())) {
+        const bool isSelected{currentIndex == index};
+        if (ImGui::Selectable(m_personagens.at(index), isSelected))
+          currentIndex = index;
+        if (isSelected) ImGui::SetItemDefaultFocus();
+        if(currentIndex == 4){
+          cham = true;
+        } 
+        else{
+          cham = false;
+        }
+      }
+      ImGui::EndCombo();
+    }
+    ImGui::PopItemWidth();
+
+    if (static_cast<int>(currentIndex) != m_currentPersonagem) {
+      m_currentPersonagem = currentIndex;
+
+      loadModel(fmt::format ("{}{}.obj", getAssetsPath(), m_personagens.at(m_currentPersonagem)));
+    }
+
+     ImGui::End();
+  }
+
+  
+}
+
+void OpenGLWindow::resizeGL(int width, int height) {
+  m_viewportWidth = width;
+  m_viewportHeight = height;
+
+  m_trackBallModel.resizeViewport(width, height);
+  m_trackBallLight.resizeViewport(width, height);
+}
+
+void OpenGLWindow::terminateGL() {
+  for (const auto &program : m_programs) {
+    glDeleteProgram(program);
+  }
+  terminateSkybox();
+}
+
+void OpenGLWindow::terminateSkybox() {
+  glDeleteProgram(m_skyProgram);
+  glDeleteBuffers(1, &m_skyVBO);
+  glDeleteVertexArrays(1, &m_skyVAO);
+}
+
+void OpenGLWindow::update() {
+  m_modelMatrix = m_trackBallModel.getRotation();
+
+  m_eyePosition = glm::vec3(0.0f, 0.0f, 2.0f + m_zoom);
+  m_viewMatrix = glm::lookAt(m_eyePosition, glm::vec3(0.0f, 0.0f, 0.0f),
+                             glm::vec3(0.0f, 1.0f, 0.0f));
+
+  float deltaTime{static_cast<float>(getDeltaTime())};
+  m_angle = m_angle + glm::radians(90.0f) * deltaTime;
+
+}
+
+void OpenGLWindow::initializeSound(std::string path) {
+  // clean up previous sounds
+  SDL_CloseAudioDevice(m_deviceId);
+  SDL_FreeWAV(m_wavBuffer);
+
+  SDL_AudioSpec wavSpec;
+  Uint32 wavLength;
+
+  if (SDL_LoadWAV(path.c_str(), &wavSpec, &m_wavBuffer, &wavLength) == nullptr) {
+    throw abcg::Exception{abcg::Exception::Runtime(
+        fmt::format("Failed to load sound {} ({})", path, SDL_GetError()))};
+  }
+
+  m_deviceId = SDL_OpenAudioDevice(nullptr, 0, &wavSpec, nullptr, 0);
+
+  if (SDL_QueueAudio(m_deviceId, m_wavBuffer, wavLength) < 0) {
+    throw abcg::Exception{abcg::Exception::Runtime(
+        fmt::format("Failed to play sound {} ({})", path, SDL_GetError()))};
+  }
+
+  SDL_PauseAudioDevice(m_deviceId, 0);
+}
+
+void OpenGLWindow::chameleon(float* a, float* b, float* c){
+
+  if (*a < m_cam.x) {
+      *a += 0.0001;
+  }
+  else{
+    *a -= 0.0001;
+  }
+  if (*b < m_cam.y) {
+      *b += 0.0001;
+  }
+  else{
+    *b -= 0.001;
+  }
+  if (*c < m_cam.z) {
+      *c += 0.001;
+  }
+  else{
+    *c -= 0.001;
+  }
+
+  // Check if a, b, c, d have reached aa, bb, cc, dd
+  if (m_chamTimer.elapsed() > m_delay / 5000.0) {
+      // Generate new random values for aa, bb, cc, dd
+      std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_real_distribution<float> dis(0.0, 1.0);
+
+        m_cam.x = dis(gen);
+        m_cam.y = dis(gen);
+        m_cam.z = dis(gen);
+        m_chamTimer.restart();
+
+        // *a = 0.0;
+        // *b = 0.0;
+        // *c = 0.0;
+  }
+  //gerar quatro numeros aleatorios
+  // as variaveis devem ir do valor atual até o valor estipulado devagar
+  // se chegou no numero, gera 4 novos numeros
+  // volta do começo
+}

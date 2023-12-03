@@ -1,0 +1,14 @@
+# Blender MTL File: 'wall1.blend'
+# Material Count: 1
+
+newmtl man
+Ns 96.078431
+Ka 1.00000 0.000000 0.000000
+Kd 1.000000 0.000000 0.000000  # Red diffuse color
+Ks 0.384615 0.384615 0.384615
+Ni 1.000000
+d 1.000000
+illum 2
+# map_Ka maps/metal.jpg
+# map_Kd maps/metal.jpg
+
