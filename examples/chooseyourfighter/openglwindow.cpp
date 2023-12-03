@@ -292,7 +292,7 @@ void OpenGLWindow::paintUI() {
         if (ImGui::Selectable(m_personagens.at(index), isSelected))
           currentIndex = index;
         if (isSelected) ImGui::SetItemDefaultFocus();
-        if(currentIndex == 4){
+        if(currentIndex == 3){
           cham = true;
         } 
         else{
