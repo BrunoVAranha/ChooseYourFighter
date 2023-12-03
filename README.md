@@ -1,5 +1,5 @@
 ## Seleção de personagem:  
-A variável m_personagens armazena o nome dos personagens,e se o personagem selecionado for Chameleon, a flag cham passa a ser true.  
+A variável `m_personagens` armazena o nome dos personagens,e se o personagem selecionado for Chameleon, a flag `cham` passa a ser true.  
 ![image](https://github.com/BrunoVAranha/ChooseYourFighter/assets/49883183/7240b7c2-c220-41bf-aac6-4742b3438a9e)  
 
 O personagem selecionado é o parâmetro para carregar o arquivo obj e carregar o modelo:  
@@ -13,6 +13,6 @@ No final de cada frame, um timer verifica se já passou 1 segundo, e se passou, 
 ![image](https://github.com/BrunoVAranha/ChooseYourFighter/assets/49883183/d51ed2b4-30af-439f-9acf-7dc49392e047)  
 
 ### Trocando cor do Chameleon:
-Em todo frame, é verificado se o personagem selecionado é o Chameleon, e se for, a função chameleon() altera os elementos de iluminação difusa (Ka) constantemente entre valores gerados aleatoriamente
+Em todo frame, é verificado se o personagem selecionado é o Chameleon, e se for, a função `chameleon()` altera os elementos de iluminação difusa (Ka) constantemente entre valores gerados aleatoriamente.
 
 ![image](https://github.com/BrunoVAranha/ChooseYourFighter/assets/49883183/1963bea4-6b2f-47c2-aade-0862f58ae8c6)  ![image](https://github.com/BrunoVAranha/ChooseYourFighter/assets/49883183/44b6eda1-fbe7-4012-9461-c2f83631a7ce)
