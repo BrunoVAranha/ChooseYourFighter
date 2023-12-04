@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Downloads/Proj3/abcg/external/imgui
+# Install script for directory: /home/bruno/Downloads/Atv3/abcg/external/imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Downloads/Proj3/examples
+# Install script for directory: /home/bruno/Downloads/Atv3/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bruno/Downloads/Proj3/build/examples/chooseyourfighter/cmake_install.cmake")
+  include("/home/bruno/Downloads/Atv3/build/examples/chooseyourfighter/cmake_install.cmake")
 
 endif()
 

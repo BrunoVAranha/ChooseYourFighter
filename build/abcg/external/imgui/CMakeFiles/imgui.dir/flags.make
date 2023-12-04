@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Proj3/abcg/external/imgui
+CXX_INCLUDES = -I/usr/include/SDL2 -I/opt/local/include -I/home/bruno/Downloads/Atv3/abcg/external/imgui
 
 CXX_FLAGS = -g -flto -fno-fat-lto-objects
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 -I/home/bruno/Downloads/Proj3/abcg -I/home/bruno/Downloads/Proj3/abcg/external/cppitertools -I/home/bruno/Downloads/Proj3/abcg/external/fmt -I/home/bruno/Downloads/Proj3/abcg/external/glm/.. -I/home/bruno/Downloads/Proj3/abcg/external/gsl -I/home/bruno/Downloads/Proj3/abcg/external/imgui -isystem /home/bruno/Downloads/Proj3/abcg/external
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/bruno/Downloads/Atv3/abcg -I/home/bruno/Downloads/Atv3/abcg/external/cppitertools -I/home/bruno/Downloads/Atv3/abcg/external/fmt -I/home/bruno/Downloads/Atv3/abcg/external/glm/.. -I/home/bruno/Downloads/Atv3/abcg/external/gsl -I/home/bruno/Downloads/Atv3/abcg/external/imgui -isystem /home/bruno/Downloads/Atv3/abcg/external
 
 CXX_FLAGS = -g -flto -fno-fat-lto-objects -Wall -Wextra -pedantic -std=gnu++20
 

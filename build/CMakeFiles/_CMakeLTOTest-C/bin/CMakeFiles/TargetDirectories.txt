@@ -1,4 +1,4 @@
-/home/bruno/Downloads/Proj3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir
-/home/bruno/Downloads/Proj3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir
-/home/bruno/Downloads/Proj3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/edit_cache.dir
-/home/bruno/Downloads/Proj3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/rebuild_cache.dir
+/home/bruno/Downloads/Atv3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir
+/home/bruno/Downloads/Atv3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir
+/home/bruno/Downloads/Atv3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/edit_cache.dir
+/home/bruno/Downloads/Atv3/build/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/rebuild_cache.dir

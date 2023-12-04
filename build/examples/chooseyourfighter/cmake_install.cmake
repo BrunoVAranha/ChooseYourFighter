@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Downloads/Proj3/examples/chooseyourfighter
+# Install script for directory: /home/bruno/Downloads/Atv3/examples/chooseyourfighter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

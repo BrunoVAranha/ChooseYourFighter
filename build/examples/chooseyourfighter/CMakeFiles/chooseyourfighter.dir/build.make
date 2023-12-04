@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bruno/Downloads/Proj3
+CMAKE_SOURCE_DIR = /home/bruno/Downloads/Atv3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bruno/Downloads/Proj3/build
+CMAKE_BINARY_DIR = /home/bruno/Downloads/Atv3/build
 
 # Include any dependencies generated for this target.
 include examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/depend.make
@@ -72,58 +72,58 @@ include examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/flags.make
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/flags.make
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o: ../examples/chooseyourfighter/main.cpp
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Proj3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o -MF CMakeFiles/chooseyourfighter.dir/main.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/main.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Atv3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o"
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.o -MF CMakeFiles/chooseyourfighter.dir/main.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/main.cpp.o -c /home/bruno/Downloads/Atv3/examples/chooseyourfighter/main.cpp
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chooseyourfighter.dir/main.cpp.i"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Proj3/examples/chooseyourfighter/main.cpp > CMakeFiles/chooseyourfighter.dir/main.cpp.i
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Atv3/examples/chooseyourfighter/main.cpp > CMakeFiles/chooseyourfighter.dir/main.cpp.i
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chooseyourfighter.dir/main.cpp.s"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Proj3/examples/chooseyourfighter/main.cpp -o CMakeFiles/chooseyourfighter.dir/main.cpp.s
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Atv3/examples/chooseyourfighter/main.cpp -o CMakeFiles/chooseyourfighter.dir/main.cpp.s
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/flags.make
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o: ../examples/chooseyourfighter/model.cpp
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Proj3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o -MF CMakeFiles/chooseyourfighter.dir/model.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/model.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Atv3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o"
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.o -MF CMakeFiles/chooseyourfighter.dir/model.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/model.cpp.o -c /home/bruno/Downloads/Atv3/examples/chooseyourfighter/model.cpp
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chooseyourfighter.dir/model.cpp.i"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Proj3/examples/chooseyourfighter/model.cpp > CMakeFiles/chooseyourfighter.dir/model.cpp.i
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Atv3/examples/chooseyourfighter/model.cpp > CMakeFiles/chooseyourfighter.dir/model.cpp.i
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chooseyourfighter.dir/model.cpp.s"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Proj3/examples/chooseyourfighter/model.cpp -o CMakeFiles/chooseyourfighter.dir/model.cpp.s
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Atv3/examples/chooseyourfighter/model.cpp -o CMakeFiles/chooseyourfighter.dir/model.cpp.s
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/flags.make
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o: ../examples/chooseyourfighter/openglwindow.cpp
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Proj3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o -MF CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/openglwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Atv3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o"
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o -MF CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.o -c /home/bruno/Downloads/Atv3/examples/chooseyourfighter/openglwindow.cpp
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.i"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Proj3/examples/chooseyourfighter/openglwindow.cpp > CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.i
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Atv3/examples/chooseyourfighter/openglwindow.cpp > CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.i
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.s"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Proj3/examples/chooseyourfighter/openglwindow.cpp -o CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.s
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Atv3/examples/chooseyourfighter/openglwindow.cpp -o CMakeFiles/chooseyourfighter.dir/openglwindow.cpp.s
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/flags.make
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o: ../examples/chooseyourfighter/trackball.cpp
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Proj3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o -MF CMakeFiles/chooseyourfighter.dir/trackball.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/trackball.cpp.o -c /home/bruno/Downloads/Proj3/examples/chooseyourfighter/trackball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Downloads/Atv3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o"
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.o -MF CMakeFiles/chooseyourfighter.dir/trackball.cpp.o.d -o CMakeFiles/chooseyourfighter.dir/trackball.cpp.o -c /home/bruno/Downloads/Atv3/examples/chooseyourfighter/trackball.cpp
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chooseyourfighter.dir/trackball.cpp.i"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Proj3/examples/chooseyourfighter/trackball.cpp > CMakeFiles/chooseyourfighter.dir/trackball.cpp.i
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Downloads/Atv3/examples/chooseyourfighter/trackball.cpp > CMakeFiles/chooseyourfighter.dir/trackball.cpp.i
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/trackball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chooseyourfighter.dir/trackball.cpp.s"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Proj3/examples/chooseyourfighter/trackball.cpp -o CMakeFiles/chooseyourfighter.dir/trackball.cpp.s
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Downloads/Atv3/examples/chooseyourfighter/trackball.cpp -o CMakeFiles/chooseyourfighter.dir/trackball.cpp.s
 
 # Object files for target chooseyourfighter
 chooseyourfighter_OBJECTS = \
@@ -150,24 +150,24 @@ bin/chooseyourfighter: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 bin/chooseyourfighter: /usr/lib/x86_64-linux-gnu/libSDL2.so
 bin/chooseyourfighter: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 bin/chooseyourfighter: examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Downloads/Proj3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/chooseyourfighter"
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/cmake -E remove_directory /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chooseyourfighter.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/cmake -E make_directory /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter.dir
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/cmake -E copy /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter.dir/chooseyourfighter
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/cmake -E remove /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/cmake -E copy_directory /home/bruno/Downloads/Proj3/examples/chooseyourfighter/assets /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter.dir/assets
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && /usr/bin/cmake -E rename /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter.dir /home/bruno/Downloads/Proj3/build/bin/chooseyourfighter
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Downloads/Atv3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/chooseyourfighter"
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/cmake -E remove_directory /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chooseyourfighter.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/cmake -E make_directory /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter.dir
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/cmake -E copy /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter.dir/chooseyourfighter
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/cmake -E remove /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/cmake -E copy_directory /home/bruno/Downloads/Atv3/examples/chooseyourfighter/assets /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter.dir/assets
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && /usr/bin/cmake -E rename /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter.dir /home/bruno/Downloads/Atv3/build/bin/chooseyourfighter
 
 # Rule to build all files generated by this target.
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/build: bin/chooseyourfighter
 .PHONY : examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/build
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/clean:
-	cd /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter && $(CMAKE_COMMAND) -P CMakeFiles/chooseyourfighter.dir/cmake_clean.cmake
+	cd /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter && $(CMAKE_COMMAND) -P CMakeFiles/chooseyourfighter.dir/cmake_clean.cmake
 .PHONY : examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/clean
 
 examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/depend:
-	cd /home/bruno/Downloads/Proj3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bruno/Downloads/Proj3 /home/bruno/Downloads/Proj3/examples/chooseyourfighter /home/bruno/Downloads/Proj3/build /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter /home/bruno/Downloads/Proj3/build/examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bruno/Downloads/Atv3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bruno/Downloads/Atv3 /home/bruno/Downloads/Atv3/examples/chooseyourfighter /home/bruno/Downloads/Atv3/build /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter /home/bruno/Downloads/Atv3/build/examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/chooseyourfighter/CMakeFiles/chooseyourfighter.dir/depend
 

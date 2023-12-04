@@ -1,7 +1,7 @@
 abcg/CMakeFiles/abcg.dir/abcg_openglfunctions.cpp.o: \
- /home/bruno/Downloads/Proj3/abcg/abcg_openglfunctions.cpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_openglfunctions.cpp \
  /usr/include/stdc-predef.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_openglfunctions.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_openglfunctions.hpp \
  /usr/include/c++/11/experimental/source_location \
  /usr/include/c++/11/cstdint \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -69,11 +69,10 @@ abcg/CMakeFiles/abcg.dir/abcg_openglfunctions.cpp.o: \
  /usr/include/c++/11/bits/ranges_base.h \
  /usr/include/c++/11/bits/max_size_type.h /usr/include/c++/11/numbers \
  /usr/include/c++/11/bits/string_view.tcc \
- /home/bruno/Downloads/Proj3/abcg/abcg_external.hpp \
- /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /usr/include/SDL2/SDL.h \
- /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
- /usr/include/SDL2/SDL_config.h \
+ /home/bruno/Downloads/Atv3/abcg/abcg_external.hpp /usr/include/GL/glew.h \
+ /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
+ /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
  /usr/include/SDL2/close_code.h /usr/include/x86_64-linux-gnu/sys/types.h \
@@ -238,7 +237,7 @@ abcg/CMakeFiles/abcg.dir/abcg_openglfunctions.cpp.o: \
  /usr/include/SDL2/SDL_shape.h /usr/include/SDL2/SDL_system.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_exception.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_exception.hpp \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \

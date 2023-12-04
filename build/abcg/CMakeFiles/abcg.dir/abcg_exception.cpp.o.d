@@ -1,7 +1,7 @@
 abcg/CMakeFiles/abcg.dir/abcg_exception.cpp.o: \
- /home/bruno/Downloads/Proj3/abcg/abcg_exception.cpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_exception.cpp \
  /usr/include/stdc-predef.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_exception.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_exception.hpp \
  /usr/include/c++/11/experimental/source_location \
  /usr/include/c++/11/cstdint \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -280,6 +280,6 @@ abcg/CMakeFiles/abcg.dir/abcg_exception.cpp.o: \
  /usr/include/SDL2/SDL_shape.h /usr/include/SDL2/SDL_system.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_external.hpp \
- /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /usr/include/SDL2/SDL.h
+ /home/bruno/Downloads/Atv3/abcg/abcg_external.hpp /usr/include/GL/glew.h \
+ /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/include/SDL2/SDL.h

@@ -1,7 +1,7 @@
 abcg/CMakeFiles/abcg.dir/abcg_openglwindow.cpp.o: \
- /home/bruno/Downloads/Proj3/abcg/abcg_openglwindow.cpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_openglwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_openglwindow.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_openglwindow.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -140,15 +140,14 @@ abcg/CMakeFiles/abcg.dir/abcg_openglwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/bruno/Downloads/Proj3/abcg/abcg_elapsedtimer.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_elapsedtimer.hpp \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_external.hpp \
- /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /usr/include/SDL2/SDL.h \
- /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
- /usr/include/SDL2/SDL_config.h \
+ /home/bruno/Downloads/Atv3/abcg/abcg_external.hpp /usr/include/GL/glew.h \
+ /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
+ /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
  /usr/include/SDL2/close_code.h /usr/include/c++/11/stdlib.h \
@@ -282,7 +281,7 @@ abcg/CMakeFiles/abcg.dir/abcg_openglwindow.cpp.o: \
  /usr/include/SDL2/SDL_shape.h /usr/include/SDL2/SDL_system.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
- /home/bruno/Downloads/Proj3/abcg/external/fmt/core.h \
+ /home/bruno/Downloads/Atv3/abcg/external/fmt/core.h \
  /usr/include/c++/11/cstring /usr/include/c++/11/functional \
  /usr/include/c++/11/tuple /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
@@ -358,11 +357,11 @@ abcg/CMakeFiles/abcg.dir/abcg_openglwindow.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui.h \
- /home/bruno/Downloads/Proj3/abcg/external/imgui/imconfig.h \
+ /home/bruno/Downloads/Atv3/abcg/external/imgui/imgui.h \
+ /home/bruno/Downloads/Atv3/abcg/external/imgui/imconfig.h \
  /usr/include/assert.h \
- /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_impl_opengl3.h \
- /home/bruno/Downloads/Proj3/abcg/external/imgui/imgui_impl_sdl.h \
+ /home/bruno/Downloads/Atv3/abcg/external/imgui/imgui_impl_opengl3.h \
+ /home/bruno/Downloads/Atv3/abcg/external/imgui/imgui_impl_sdl.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -395,9 +394,9 @@ abcg/CMakeFiles/abcg.dir/abcg_openglwindow.cpp.o: \
  /usr/include/c++/11/bits/regex_executor.h \
  /usr/include/c++/11/bits/regex_executor.tcc \
  /usr/include/SDL2/SDL_events.h /usr/include/SDL2/SDL_video.h \
- /home/bruno/Downloads/Proj3/abcg/abcg_application.hpp \
- /home/bruno/Downloads/Proj3/abcg/abcg_exception.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_application.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_exception.hpp \
  /usr/include/c++/11/experimental/source_location \
- /home/bruno/Downloads/Proj3/abcg/abcg_embeddedfonts.hpp \
- /home/bruno/Downloads/Proj3/abcg/abcg_openglfunctions.hpp \
- /home/bruno/Downloads/Proj3/abcg/abcg_string.hpp
+ /home/bruno/Downloads/Atv3/abcg/abcg_embeddedfonts.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_openglfunctions.hpp \
+ /home/bruno/Downloads/Atv3/abcg/abcg_string.hpp
