@@ -186,7 +186,6 @@ void OpenGLWindow::paintGL() {
   if(m_backTimer.elapsed() < m_delay / 1000.0) return;
   m_backTimer.restart();
   glClearColor(r, g, b, a);
-  //m_Ka.x = m_Ka.x + 0.1;
   renderSkybox();
 
 }
@@ -345,7 +344,6 @@ void OpenGLWindow::update() {
 
   float deltaTime{static_cast<float>(getDeltaTime())};
   m_angle = m_angle + glm::radians(90.0f) * deltaTime;
-
 }
 
 void OpenGLWindow::initializeSound(std::string path) {
@@ -374,27 +372,25 @@ void OpenGLWindow::initializeSound(std::string path) {
 void OpenGLWindow::chameleon(float* a, float* b, float* c){
 
   if (*a < m_cam.x) {
-      *a += 0.0001;
+      *a += 0.01;
   }
   else{
-    *a -= 0.0001;
+    *a -= 0.01;
   }
   if (*b < m_cam.y) {
-      *b += 0.0001;
+      *b += 0.01;
   }
   else{
-    *b -= 0.001;
+    *b -= 0.01;
   }
   if (*c < m_cam.z) {
-      *c += 0.001;
+      *c += 0.01;
   }
   else{
-    *c -= 0.001;
+    *c -= 0.01;
   }
 
-  // Check if a, b, c, d have reached aa, bb, cc, dd
-  if (m_chamTimer.elapsed() > m_delay / 5000.0) {
-      // Generate new random values for aa, bb, cc, dd
+  if (m_chamTimer.elapsed() > m_cham_time / 3000.0) {
       std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_real_distribution<float> dis(0.0, 1.0);
@@ -404,12 +400,6 @@ void OpenGLWindow::chameleon(float* a, float* b, float* c){
         m_cam.z = dis(gen);
         m_chamTimer.restart();
 
-        // *a = 0.0;
-        // *b = 0.0;
-        // *c = 0.0;
   }
-  //gerar quatro numeros aleatorios
-  // as variaveis devem ir do valor atual até o valor estipulado devagar
-  // se chegou no numero, gera 4 novos numeros
-  // volta do começo
+
 }

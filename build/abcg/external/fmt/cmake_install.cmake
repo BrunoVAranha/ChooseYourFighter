@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Downloads/Atv3/abcg/external/fmt
+# Install script for directory: /home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/fmt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

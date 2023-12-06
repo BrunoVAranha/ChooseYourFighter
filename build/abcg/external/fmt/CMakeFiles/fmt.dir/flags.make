@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/bruno/Downloads/Atv3/abcg/external/fmt
+CXX_INCLUDES = -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/fmt
 
 CXX_FLAGS = -g -flto -fno-fat-lto-objects -std=gnu++20
 

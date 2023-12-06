@@ -20,7 +20,6 @@ class OpenGLWindow : public abcg::OpenGLWindow {
   void terminateGL() override;
 
  private:
-  // static const int m_numAmogus{500};
   int m_viewportWidth{};
   int m_viewportHeight{};
 
@@ -40,8 +39,6 @@ class OpenGLWindow : public abcg::OpenGLWindow {
 
   std::default_random_engine m_randomEngine;
   float m_FOV{90.0f};
-  // std::array<glm::vec3, m_numAmogus> m_amogusPositions;
-  // std::array<glm::vec3, m_numAmogus> m_amogusRotations;
 
   float m_angle{};
 
@@ -68,7 +65,7 @@ class OpenGLWindow : public abcg::OpenGLWindow {
 
 
   int m_delay{1000};
-  int m_cham_time{5000};
+  int m_cham_time{3000};
   abcg::ElapsedTimer m_backTimer;
   abcg::ElapsedTimer m_chamTimer;
 

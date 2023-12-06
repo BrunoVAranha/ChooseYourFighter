@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 -I/home/bruno/Downloads/Atv3/abcg -I/home/bruno/Downloads/Atv3/abcg/external/cppitertools -I/home/bruno/Downloads/Atv3/abcg/external/fmt -I/home/bruno/Downloads/Atv3/abcg/external/glm/.. -I/home/bruno/Downloads/Atv3/abcg/external/gsl -I/home/bruno/Downloads/Atv3/abcg/external/imgui -isystem /home/bruno/Downloads/Atv3/abcg/external
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/cppitertools -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/fmt -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/glm/.. -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/gsl -I/home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external/imgui -isystem /home/bruno/Downloads/FINAL/ChooseYourFighter/abcg/external
 
 CXX_FLAGS = -g -flto -fno-fat-lto-objects -std=gnu++20
 
